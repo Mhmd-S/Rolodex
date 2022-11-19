@@ -16,11 +16,11 @@ const Form = ({hoistDataForm}) => {
             <label>Date of Birth</label>
             <input {...register("dob")} type="date"/>
             <label>Field/Occupation</label>
-            <input {...register("occupation")} type="text"/>
+            <input {...register("occupation")} type="textarea"/>
             <label>Contact Information</label>
             <input {...register("contactInfo")} type="text"/>
             <label>Notes</label>
-            <input {...register("notes")} type="text"/>
+            <textarea {...register("notes")} type="text"/>
             <button type='submit'>Submit</button>
         </form>
     )
