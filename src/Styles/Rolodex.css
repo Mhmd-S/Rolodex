@@ -1,0 +1,98 @@
+.Rolodex-List-Container {
+    width: 25%;
+    height: 100%;
+    border-right: 1px solid #eee;
+}
+
+.Rolodex-List-Header {
+    display: flex;
+    height: 10%;
+    width: 100%;
+    padding: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #1c1c1c;
+}
+
+.Rolodex-List-Header-Title {
+    width: 70%;
+    text-align: center;
+}
+
+.Rolodex-List-Header-AddButton {
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;   
+}
+
+.Rolodex-List-Header-AddButton img {
+    width: 35px;
+    height: 35px;
+}
+
+.Rolodex-List-Search-Container {
+    width: 100%;
+    height: 7.5%;
+    display: flex;
+    padding-top: 0.3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.Rolodex-List-Search-Container label {
+    display: none;
+}
+
+.Rolodex-List-Search-Container input {
+    width: 80%;
+    font-size: 1rem;
+    padding: 0.4rem;
+    padding-right: 0.6rem;
+    border-radius: 7.5px;
+    border: 1px solid transparent;
+    background-color: #262628;
+    color: white;
+}
+
+.Rolodex-List-Search-Container input:focus {
+    outline: none;
+}
+
+.Search-Cancel {
+    width: 35px;
+    height: 35px;
+    background-color: black;
+    cursor: pointer;
+}
+
+.Search-Cancel svg {
+    width: 40px;
+    height: 40px;
+}
+
+.RolodexCards-Container {
+    overflow-y: scroll;
+    width: 100%;
+    height: 82.5%;
+    padding-top: 0.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* width */
+.RolodexCards-Container::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+  }
+  
+  /* Handle */
+.RolodexCards-Container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+.RolodexCards-Container::-webkit-scrollbar-thumb:hover {
+    width: 10px;
+  }

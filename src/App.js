@@ -1,33 +1,45 @@
 import React, {useState} from 'react';
 import './App.css';
+import './Styles/From.css'
+import './Styles/RolodexItem.css'
+import './Styles/Rolodex.css'
 import Form from './Components/Form';
 import Rolodex from './Components/Rolodex';
 import Card from './Components/Card';
 
 function App() {
   const [rolodex, setRolodex] = useState([]);
-  const [selectedCard, setSelectedCard] = useState(null);
+  const [displayRolodex, setDisplayRolodex] = useState([]);
+  const [selectedCard, setSelectedCard] = useState('');
   const [formShow, setFormShow] = useState(false)
 
   const hoistDataForm = (data) => {
+    data.cardID = data.lastName + data.dob;
+    if (rolodex.some(card => card.cardID == data.cardID)) {
+      return;
+    }
     setRolodex([...rolodex, data])
   }
 
-  const selectCard = (cardID) => {
-    setSelectedCard(cardID)
+  const selectCard = (info) => {
+    setSelectedCard(info)
     setFormShow(false);
+  }
+
+
+  const handleSearch = (e) => {
+    const input = e.target.value.toLowerCase();
+    let rolodexCopy = rolodex;
+    rolodexCopy = rolodexCopy.filter(item => (item.firstName.toLowerCase().startsWith(input) || item.middleName.toLowerCase().startsWith(input) || item.lastName.toLowerCase().startsWith(input)));
+    setDisplayRolodex(rolodexCopy);
   }
 
   return (
     <div className="App-Container">
-      <div className="App-Rolodex-List-Container">
-        <div className="App-Rolodex-List-Header">
-          <p className="App-Rolodex-List-Header-Title">Cards</p>
-          <button className='App-Rolodex-List-Header-AddButton' onClick={()=>setFormShow(true)}>Add</button>
+        <Rolodex selectCard={selectCard} rolodexData={displayRolodex[0] ? displayRolodex : rolodex} showForm={setFormShow} handleSearch={handleSearch}  selectedCard={selectedCard} />
+      <div className="App-FormCard-Container">
+        {formShow ? <Form  hoistDataForm={hoistDataForm}/> : (selectedCard != null ? <Card cardInfo={selectedCard} /> : "Welcome Suleiman!")}
         </div>
-        <Rolodex selectCard={selectCard} rolodexData={rolodex}/> 
-      </div>
-      {formShow ? <Form  hoistDataForm={hoistDataForm}/> : (selectedCard ? <Card cardInfo={rolodex[selectedCard]} /> : "Welcome Suleiman!")}
     </div>  
   );
 }

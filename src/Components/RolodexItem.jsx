@@ -1,9 +1,10 @@
 import React from 'react';
 
-const RolodexItem = ({itemInfo, cardID, selectCard}) => {
+const RolodexItem = ({itemInfo, selectCard, highLighted}) => {
+
     return (
-        <div className="Rolodex-Item-Container" onClick={()=>{selectCard(cardID)}}>
-            <p>{itemInfo.lastName.toUpperCase()}, {itemInfo.firstName} {itemInfo.middleName} </p>
+        <div className={highLighted ?  "Rolodex-Item-Container Rolodex-Item-Highlighted" : "Rolodex-Item-Container"} onClick={()=>{selectCard(itemInfo)}}>
+            <p><span>{itemInfo.lastName.toUpperCase()}</span>, {itemInfo.firstName} {itemInfo.middleName} </p>
         </div>
     )
 }

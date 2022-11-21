@@ -20,7 +20,7 @@ const Form = ({hoistDataForm}) => {
             <label>Contact Information</label>
             <input {...register("contactInfo")} type="text"/>
             <label>Notes</label>
-            <textarea {...register("notes")} type="text"/>
+            <input {...register("notes")} type="text"/>
             <button type='submit'>Submit</button>
         </form>
     )

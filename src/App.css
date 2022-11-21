@@ -10,8 +10,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
+  color: white;
 }
 
-.App-Rolodex-List-Container {
-  width: 50%;
+.App-FormCard-Container {
+  width: 75%;
 }
