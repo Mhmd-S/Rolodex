@@ -1,27 +1,36 @@
 import React from 'react';
 import { useForm } from "react-hook-form"
 
-const Form = ({hoistDataForm}) => {
+const Form = ({hoistDataForm, closeForm}) => {
 
     const {register, handleSubmit} = useForm();
 
     return(
-        <form onSubmit={handleSubmit((data)=>{hoistDataForm(data)})}>
-            <label>First Name</label>
-            <input {...register("firstName")} type="text"/>
-            <label>Middle Name</label>
-            <input {...register("middleName")} type="text"/>
-            <label>Last Name</label>
-            <input {...register("lastName")} type="text"/>
-            <label>Date of Birth</label>
-            <input {...register("dob")} type="date"/>
-            <label>Field/Occupation</label>
-            <input {...register("occupation")} type="textarea"/>
+        <form className="Form-Container" onSubmit={handleSubmit((data)=>{hoistDataForm(data)})}>
+            <div className="Form-CloseForm-container">
+                <img onClick={closeForm} src="2F2FD.svg" alt='Close Form'/>
+            </div>
+            <div className='Form-Name-Inputs-Container'>
+                <label>Honorifics</label>
+                <input {...register("honorifics")} type="text"/>
+                <label>First Name</label>
+                <input {...register("firstName")} type="text"/>
+                <label>Field/Occupation</label>
+                <input {...register("occupation")} type="textarea"/>
+                <label>Middle Name</label>
+                <input {...register("middleName")} type="text"/>
+                <label>Date of Birth</label>
+                <input {...register("dob")} type="date"/>
+                <label>Last Name</label>
+                <input {...register("lastName")} type="text"/>
+            </div>
             <label>Contact Information</label>
-            <input {...register("contactInfo")} type="text"/>
+            <textarea {...register("contactInfo")} type="text"/>
+            <label>Address</label>
+            <textarea {...register("address")} type="text"/>
             <label>Notes</label>
-            <input {...register("notes")} type="text"/>
-            <button type='submit'>Submit</button>
+            <textarea className="Form-Notes-Input" {...register("notes")} />
+            <button type='submit'><img src="./2714.svg" alt="Create"/></button>
         </form>
     )
 }

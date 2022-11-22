@@ -11,7 +11,7 @@ function App() {
   const [rolodex, setRolodex] = useState([]);
   const [displayRolodex, setDisplayRolodex] = useState([]);
   const [selectedCard, setSelectedCard] = useState('');
-  const [formShow, setFormShow] = useState(false)
+  const [formShow, setFormShow] = useState(true)
 
   const hoistDataForm = (data) => {
     data.cardID = data.lastName + data.dob;
@@ -26,7 +26,6 @@ function App() {
     setFormShow(false);
   }
 
-
   const handleSearch = (e) => {
     const input = e.target.value.toLowerCase();
     let rolodexCopy = rolodex;
@@ -38,7 +37,7 @@ function App() {
     <div className="App-Container">
         <Rolodex selectCard={selectCard} rolodexData={displayRolodex[0] ? displayRolodex : rolodex} showForm={setFormShow} handleSearch={handleSearch}  selectedCard={selectedCard} />
       <div className="App-FormCard-Container">
-        {formShow ? <Form  hoistDataForm={hoistDataForm}/> : (selectedCard != null ? <Card cardInfo={selectedCard} /> : "Welcome Suleiman!")}
+        {formShow ? <Form  hoistDataForm={hoistDataForm} closeForm={()=>{setFormShow(false)}}/> : (selectedCard != null ? <Card cardInfo={selectedCard} /> : "Welcome Suleiman!")}
         </div>
     </div>  
   );
