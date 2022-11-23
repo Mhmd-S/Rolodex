@@ -10,10 +10,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: rgb(25, 25, 25);
   color: white;
 }
 
 .App-FormCard-Container {
   width: 75%;
+}
+
+.App-Welcome-Container {
+  color: #888;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 4rem;
 }

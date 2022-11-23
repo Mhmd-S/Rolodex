@@ -1,0 +1,85 @@
+.Card-Container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.Card-Edit-Button-Container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 0.4rem;
+}
+
+.Card-Edit-Button-Container img {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.Card-Details-Short-Container {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 15% 35% 15% 35%;
+    gap: 1rem;
+    border-bottom: 1px solid #888;
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.4rem;
+    align-items: center;
+}
+
+.Card-Short-Details-Labels, .Card-Long-Details-Labels {
+    padding-right: 0.4rem;
+    padding-bottom: 0.4rem;
+    font-size: 1.1rem;
+}
+
+.Card-Short-Details-Info {
+    width: 70%;
+    font-size: 0.7rem;
+    padding: 0.4rem;
+    border-radius: 7.5px;
+    border: 1px solid transparent;
+    background-color: #262628;
+    color: white;
+}
+
+.Card-Long-Details-Info {
+    width: 100%;
+    min-height: 10%;
+    max-height: 10%;
+    padding: 0.4rem;
+    margin-bottom: 0.45rem;
+    border-radius: 7.5px;
+    border: 1px solid transparent;
+    background-color: #262628;
+    color: white;
+    resize: none;
+    white-space:pre-wrap;
+    overflow-y: scroll;
+}
+
+.Card-Long-Details-Info::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+  }
+  
+  /* Handle */
+.Card-Long-Details-Info::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+  }
+  
+  /* Handle on hover */
+.Card-Long-Details-Info::-webkit-scrollbar-thumb:hover {
+    width: 10px;
+  }
+
+.Notes {
+    min-height: 25% !important;
+    max-height: 25% !important;
+}

@@ -1,7 +1,7 @@
 .Rolodex-List-Container {
     width: 25%;
     height: 100%;
-    border-right: 1px solid #eee;
+    border-right: 1px solid #888;
 }
 
 .Rolodex-List-Header {
@@ -61,7 +61,8 @@
 .Search-Cancel {
     width: 35px;
     height: 35px;
-    background-color: black;
+    background-color: rgb(25, 25, 25);
+    border: none;
     cursor: pointer;
 }
 

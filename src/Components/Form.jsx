@@ -12,17 +12,17 @@ const Form = ({hoistDataForm, closeForm}) => {
             </div>
             <div className='Form-Name-Inputs-Container'>
                 <label>Honorifics</label>
-                <input {...register("honorifics")} type="text"/>
+                <input  {...register("honorifics")} type="text"/>
                 <label>First Name</label>
-                <input {...register("firstName")} type="text"/>
+                <input  {...register("firstName")} type="text"/>
                 <label>Field/Occupation</label>
-                <input {...register("occupation")} type="textarea"/>
+                <input  {...register("occupation")} type="textarea"/>
                 <label>Middle Name</label>
-                <input {...register("middleName")} type="text"/>
+                <input  {...register("middleName")} type="text"/>
                 <label>Date of Birth</label>
-                <input {...register("dob")} type="date"/>
+                <input  {...register("dob")} type="date"/>
                 <label>Last Name</label>
-                <input {...register("lastName")} type="text"/>
+                <input  {...register("lastName")} type="text"/>
             </div>
             <label>Contact Information</label>
             <textarea {...register("contactInfo")} type="text"/>
