@@ -19,7 +19,7 @@ function App() {
       "contactInfo": "0182975619",
       "address": "The Square @ One City, Jalan Harmoni Street, \nOne City, Subang Jaya, Selangor,\nMalaysia",
       "notes": "Works for the CIA Malaysian desk.\nGraduated with honors from APU.\nBsc in Computer Science.\nHad dinner with MS at the Annual Conference of The Great.\nInvited MS to have drinks at the Royal Gentlemen Club.\nMarried to July Augustine on 03/09/1999.\n\n",
-      "cardID": "Suleiman2001-12-31"
+      "cardID": "MohamedSuleiman2001-12-31"
   }]);
   const [displayRolodex, setDisplayRolodex] = useState([]);
   const [selectedCard, setSelectedCard] = useState('');
