@@ -1,7 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form"
 
-const Form = ({hoistDataForm, closeForm}) => {
+const Form = ({hoistDataForm, closeForm, editCardInfo}) => {
 
     const {register, handleSubmit} = useForm();
 
@@ -12,24 +12,24 @@ const Form = ({hoistDataForm, closeForm}) => {
             </div>
             <div className='Form-Name-Inputs-Container'>
                 <label>Honorifics</label>
-                <input  {...register("honorifics")} type="text"/>
+                <input  value={editCardInfo !== '' ? editCardInfo.honorifics : ''} {...register("honorifics")} type="text"/>
                 <label>First Name</label>
-                <input  {...register("firstName")} type="text"/>
+                <input  value={editCardInfo !== '' ? editCardInfo.firstName : ''} {...register("firstName")} type="text"/>
                 <label>Field/Occupation</label>
-                <input  {...register("occupation")} type="textarea"/>
+                <input  value={editCardInfo !== '' ? editCardInfo.occupation : ''} {...register("occupation")} type="textarea"/>
                 <label>Middle Name</label>
-                <input  {...register("middleName")} type="text"/>
+                <input  value={editCardInfo !== '' ? editCardInfo.middleName : ''} {...register("middleName")} type="text"/>
                 <label>Date of Birth</label>
-                <input  {...register("dob")} type="date"/>
+                <input  value={editCardInfo !== '' ? editCardInfo.dob : ''} {...register("dob")} type="date"/>
                 <label>Last Name</label>
-                <input  {...register("lastName")} type="text"/>
+                <input  value={editCardInfo !== '' ? editCardInfo.lastName : ''} {...register("lastName")} type="text"/>
             </div>
             <label>Contact Information</label>
-            <textarea {...register("contactInfo")} type="text"/>
+            <textarea value={editCardInfo !== '' ? editCardInfo.contactInfo : ''} {...register("contactInfo")} type="text"/>
             <label>Address</label>
-            <textarea {...register("address")} type="text"/>
+            <textarea value={editCardInfo !== '' ? editCardInfo.address : ''} {...register("address")} type="text"/>
             <label>Notes</label>
-            <textarea className="Form-Notes-Input" {...register("notes")} />
+            <textarea className="Form-Notes-Input" value={editCardInfo !== '' ? editCardInfo.notes : ''} {...register("notes")} />
             <button type='submit'><img src="./2714.svg" alt="Create"/></button>
         </form>
     )

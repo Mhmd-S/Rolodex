@@ -16,6 +16,7 @@
 
 .App-FormCard-Container {
   width: 75%;
+  position: relative;
 }
 
 .App-Welcome-Container {
@@ -24,4 +25,18 @@
   height: 100%;
   text-align: center;
   font-size: 4rem;
+}
+
+.App-Warning-Container {
+  position: absolute;
+  width: 40%;
+  height: fit-content;
+  padding: 1rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-top: 1rem;
+  background-color: red;
+  color: white;
+  border-radius: 7.5px;
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Card = ({cardInfo}) => {
+const Card = ({cardInfo, editCard}) => {
     return(
         <div className='Card-Container'>
             <div className='Card-Edit-Button-Container'>
-                <img src="E25D.svg" alt="edit"/>
+                <img onClick={editCard} src="E25D.svg" alt="edit"/>
             </div>
             <div className='Card-Details-Short-Container'>
                 <div className="Card-Short-Details-Labels" >Honorifics</div><div className="Card-Short-Details-Info" >{cardInfo.honorifics}</div>

@@ -25,7 +25,7 @@ const Rolodex = ({ rolodexData, selectCard, showForm, handleSearch, selectedCard
         <div className="Rolodex-List-Container">
             <div className="Rolodex-List-Header">
                 <p className="Rolodex-List-Header-Title">Cards</p>
-                <button className='Rolodex-List-Header-AddButton' onClick={()=>showForm(true)}><img alt="add" src="/E267.svg"/></button>
+                <button className='Rolodex-List-Header-AddButton' onClick={showForm}><img alt="add" src="/E267.svg"/></button>
             </div>
             <div className='Rolodex-List-Search-Container'>
                 <label>Search</label>
