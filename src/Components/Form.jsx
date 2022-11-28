@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useForm } from "react-hook-form"
 
 const Form = ({hoistDataForm, closeForm, editCardInfo}) => {
 
-    const {register, handleSubmit} = useForm();
+    const {register, handleSubmit, formState: { errors }} = useForm();
 
     const cardInfoEdit =  editCardInfo !== '' ? editCardInfo : '';
 
@@ -15,16 +15,21 @@ const Form = ({hoistDataForm, closeForm, editCardInfo}) => {
             <div className='Form-Name-Inputs-Container'>
                 <label>Honorifics</label>
                 <input  defaultValue={cardInfoEdit.honorifics } {...register("honorifics")} type="text"/>
+
                 <label>First Name</label>
-                <input  defaultValue={cardInfoEdit.firstName } {...register("firstName")} type="text"/>
+                <input  placeholder={errors.firstName?.type === 'required' ? "First name is required." : undefined} className={errors.firstName?.type === 'required' ?  "Form-Error" : undefined} defaultValue={cardInfoEdit.firstName } {...register("firstName", { required: true })} aria-invalid={errors.firstName ? "true" : "false"} type="text"/>
+
                 <label>Field/Occupation</label>
                 <input  defaultValue={cardInfoEdit.occupation } {...register("occupation")} type="textarea"/>
+
                 <label>Middle Name</label>
                 <input  defaultValue={cardInfoEdit.middleName } {...register("middleName")} type="text"/>
+
                 <label>Date of Birth</label>
-                <input  defaultValue={cardInfoEdit.dob } {...register("dob")} type="date"/>
+                <input className={errors.dob?.type === 'required' ?  "Form-Error" : undefined} defaultValue={cardInfoEdit.dob } {...register("dob", {required:true})} type="date"/>
+
                 <label>Last Name</label>
-                <input  defaultValue={cardInfoEdit.lastName } {...register("lastName")} type="text"/>
+                <input  placeholder={errors.lastName?.type === 'required' ? "Last name is required." : undefined} className={errors.lastName?.type === 'required' ?  "Form-Error" : undefined} defaultValue={cardInfoEdit.lastName } {...register("lastName", { required: true })} aria-invalid={errors.lastName? "true" : "false"} type="text"/>
             </div>
             <label>Contact Information</label>
             <textarea defaultValue={cardInfoEdit.contactInfo } {...register("contactInfo")} type="text"/>
@@ -36,5 +41,7 @@ const Form = ({hoistDataForm, closeForm, editCardInfo}) => {
         </form>
     )
 }
+
+// Todo add form validation
 
 export default Form;

@@ -4,14 +4,16 @@ import './Styles/From.css'
 import './Styles/RolodexItem.css'
 import './Styles/Rolodex.css'
 import './Styles/Card.css'
+import './Styles/Birthdays.css'
 import Form from './Components/Form';
 import Rolodex from './Components/Rolodex';
 import Card from './Components/Card';
 
+
 function App() {
   const [rolodex, setRolodex] = useState([{
       "honorifics": "Mr",
-      "firstName": "Mohamed",
+      "firstName": "MIcheal",
       "occupation": "Teacher",
       "middleName": "Ahmad",
       "dob": "2001-12-31",
@@ -20,11 +22,89 @@ function App() {
       "address": "The Square @ One City, Jalan Harmoni Street, \nOne City, Subang Jaya, Selangor,\nMalaysia",
       "notes": "Works for the CIA Malaysian desk.\nGraduated with honors from APU.\nBsc in Computer Science.\nHad dinner with MS at the Annual Conference of The Great.\nInvited MS to have drinks at the Royal Gentlemen Club.\nMarried to July Augustine on 03/09/1999.\n\n",
       "cardID": "MohamedSuleiman2001-12-31"
-  }]);
+  },{
+    "honorifics": "Mr",
+    "firstName": "Joshua",
+    "occupation": "Teacher",
+    "middleName": "Ahmad",
+    "dob": "2001-05-9",
+    "lastName": "Suleiman",
+    "contactInfo": "0182975619",
+    "address": "The Square @ One City, Jalan Harmoni Street, \nOne City, Subang Jaya, Selangor,\nMalaysia",
+    "notes": "Works for the CIA Malaysian desk.\nGraduated with honors from APU.\nBsc in Computer Science.\nHad dinner with MS at the Annual Conference of The Great.\nInvited MS to have drinks at the Royal Gentlemen Club.\nMarried to July Augustine on 03/09/1999.\n\n",
+    "cardID": "MohamedSuleiman20341-12-31"
+},{
+  "honorifics": "Mr",
+  "firstName": "Jeshva",
+  "occupation": "Teacher",
+  "middleName": "Ahmad",
+  "dob": "2001-12-1",
+  "lastName": "Suleiman",
+  "contactInfo": "0182975619",
+  "address": "The Square @ One City, Jalan Harmoni Street, \nOne City, Subang Jaya, Selangor,\nMalaysia",
+  "notes": "Works for the CIA Malaysian desk.\nGraduated with honors from APU.\nBsc in Computer Science.\nHad dinner with MS at the Annual Conference of The Great.\nInvited MS to have drinks at the Royal Gentlemen Club.\nMarried to July Augustine on 03/09/1999.\n\n",
+  "cardID": "MohamedSuleiman223201-12-31"
+},{
+  "honorifics": "Mr",
+  "firstName": "Mohamed",
+  "occupation": "Teacher",
+  "middleName": "Ahmad",
+  "dob": "2001-12-2",
+  "lastName": "Suleiman",
+  "contactInfo": "0182975619",
+  "address": "The Square @ One City, Jalan Harmoni Street, \nOne City, Subang Jaya, Selangor,\nMalaysia",
+  "notes": "Works for the CIA Malaysian desk.\nGraduated with honors from APU.\nBsc in Computer Science.\nHad dinner with MS at the Annual Conference of The Great.\nInvited MS to have drinks at the Royal Gentlemen Club.\nMarried to July Augustine on 03/09/1999.\n\n",
+  "cardID": "MohamedSuleiman1101-12-31"
+},{
+  "honorifics": "Mr",
+  "firstName": "Omar",
+  "occupation": "Teacher",
+  "middleName": "Ahmad",
+  "dob": "2001-12-31",
+  "lastName": "Suleiman",
+  "contactInfo": "0182975619",
+  "address": "The Square @ One City, Jalan Harmoni Street, \nOne City, Subang Jaya, Selangor,\nMalaysia",
+  "notes": "Works for the CIA Malaysian desk.\nGraduated with honors from APU.\nBsc in Computer Science.\nHad dinner with MS at the Annual Conference of The Great.\nInvited MS to have drinks at the Royal Gentlemen Club.\nMarried to July Augustine on 03/09/1999.\n\n",
+  "cardID": "MohamedSuleiman200dsd1-12-31"
+},{
+  "honorifics": "Mr",
+  "firstName": "Omar",
+  "occupation": "Teacher",
+  "middleName": "Ahmad",
+  "dob": "2001-02-01",
+  "lastName": "Suleiman",
+  "contactInfo": "0182975619",
+  "address": "The Square @ One City, Jalan Harmoni Street, \nOne City, Subang Jaya, Selangor,\nMalaysia",
+  "notes": "Works for the CIA Malaysian desk.\nGraduated with honors from APU.\nBsc in Computer Science.\nHad dinner with MS at the Annual Conference of The Great.\nInvited MS to have drinks at the Royal Gentlemen Club.\nMarried to July Augustine on 03/09/1999.\n\n",
+  "cardID": "MohamedSuleiman2040dsd1-12-31"
+},{
+  "honorifics": "Mr",
+  "firstName": "Omar",
+  "occupation": "Teacher",
+  "middleName": "Ahmad",
+  "dob": "2001-05-08",
+  "lastName": "Suleiman",
+  "contactInfo": "0182975619",
+  "address": "The Square @ One City, Jalan Harmoni Street, \nOne City, Subang Jaya, Selangor,\nMalaysia",
+  "notes": "Works for the CIA Malaysian desk.\nGraduated with honors from APU.\nBsc in Computer Science.\nHad dinner with MS at the Annual Conference of The Great.\nInvited MS to have drinks at the Royal Gentlemen Club.\nMarried to July Augustine on 03/09/1999.\n\n",
+  "cardID": "MohamedSul32eiman200dsd1-12-31"
+},{
+  "honorifics": "Mr",
+  "firstName": "OOD",
+  "occupation": "Teacher",
+  "middleName": "Ahmad",
+  "dob": "2001-03-05",
+  "lastName": "Suleiman",
+  "contactInfo": "0182975619",
+  "address": "The Square @ One City, Jalan Harmoni Street, \nOne City, Subang Jaya, Selangor,\nMalaysia",
+  "notes": "Works for the CIA Malaysian desk.\nGraduated with honors from APU.\nBsc in Computer Science.\nHad dinner with MS at the Annual Conference of The Great.\nInvited MS to have drinks at the Royal Gentlemen Club.\nMarried to July Augustine on 03/09/1999.\n\n",
+  "cardID": "Moha12313dSuleiman200dsd1-12-31"
+}]);
   const [displayRolodex, setDisplayRolodex] = useState([]);
   const [selectedCard, setSelectedCard] = useState('');
   const [formShow, setFormShow] = useState(false);
   const [warningMsg, setWarningMsg] = useState('');
+
 
   const showForm = () => {
     if (formShow === true && selectedCard !== '') {
@@ -71,6 +151,7 @@ function App() {
 
   return (
     <div className="App-Container">
+
         <Rolodex selectCard={selectCard} rolodexData={displayRolodex[0] ? displayRolodex : rolodex} showForm={showForm} handleSearch={handleSearch}  selectedCard={selectedCard} />
       <div className="App-FormCard-Container">
         {warningMsg && <div className="App-Warning-Container">{warningMsg}</div>}

@@ -1,0 +1,26 @@
+.Birthdays-Container {
+    width: 100%;
+    height: 100%;
+}
+
+.Birthdays-Birthday-Container {
+    width: 100%;
+}
+
+.Birthdays-Birthday-Header {
+    width: 100%;
+    background-color: rgb(92, 92, 92);
+    padding: 0.3rem;
+}
+
+.Birthdays-Birthday-List {
+    width: 100%;
+    padding: 1rem;
+    list-style: none;
+}
+
+.Birthdays-Birthday-List li {
+    padding: 0.4rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+}

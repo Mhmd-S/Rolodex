@@ -40,3 +40,7 @@
   color: white;
   border-radius: 7.5px;
 }
+
+.Hide-Element { 
+  display: none;
+}

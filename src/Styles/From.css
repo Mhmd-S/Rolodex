@@ -107,3 +107,7 @@
     width: 35px;
     height: 35px;
 }
+
+.Form-Error {
+    border: 1px solid red !important;
+}
