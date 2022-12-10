@@ -2,6 +2,7 @@
     width: 25%;
     height: 100%;
     border-right: 1px solid #888;
+    background: linear-gradient(#003DA4, #0093D5);
 }
 
 .Rolodex-List-Header {
@@ -11,12 +12,13 @@
     padding: 1rem;
     justify-content: flex-end;
     align-items: center;
-    background-color: #1c1c1c;
+    background-color:#fbfbfb;
 }
 
 .Rolodex-List-Header-Title {
     width: 70%;
     text-align: center;
+    font-weight: 700;
 }
 
 .Rolodex-List-Header-AddButton {
@@ -43,15 +45,28 @@
     display: none;
 }
 
-.Rolodex-List-Search-Container input {
-    width: 80%;
+.Search-Input-Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     font-size: 1rem;
-    padding: 0.4rem;
-    padding-right: 0.6rem;
-    border-radius: 7.5px;
+    padding: 1rem 0.8rem 0rem 0.8rem;
+}
+
+.Search-Input-Container input{
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem;
+    font-weight: 500;
+    border-radius: 5px;
     border: 1px solid transparent;
-    background-color: #262628;
-    color: white;
+    background-color: #003288;
+    color: #92aad2;
+}
+
+.Search-Input-Container input::placeholder {
+    color: #92aad2;
 }
 
 .Rolodex-List-Search-Container input:focus {
@@ -59,11 +74,19 @@
 }
 
 .Search-Cancel {
-    width: 35px;
-    height: 35px;
-    background-color: rgb(25, 25, 25);
+    width: 12%;
+    background-color: transparent;
     border: none;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Search-Cancel img {
+    width: 35px;
+    height: 35px;
+    background-color: transparent;
 }
 
 .RolodexCards-Container {

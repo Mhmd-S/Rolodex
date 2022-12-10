@@ -3,16 +3,13 @@ import '../Styles/Rolodex.css'
 import RolodexItem from './RolodexItem.jsx';
 import Birthdays from './Birthdays';
 
+// Tab index not working properly. Use routing and it may solve the problem.
+
 const Rolodex = ({ rolodexData, selectCard, showForm, handleSearch, selectedCard }) => {
 
     const [showBirthday ,setShowBirthday] = useState(false);
 
     const searchInput = useRef(null);
-
-    const cancelSearch = () => {
-        searchInput.current.blur();
-        searchInput.current.value = '';
-    }
 
     rolodexData = rolodexData.sort(function(a, b){
         let x = a.lastName.toLowerCase();
@@ -33,8 +30,10 @@ const Rolodex = ({ rolodexData, selectCard, showForm, handleSearch, selectedCard
             </div>
             <div className={showBirthday ? 'Hide-Element' : 'Rolodex-List-Search-Container'}>
                 <label>Search</label>
-                <input ref={searchInput} onChange={(e)=>handleSearch(e)} placeholder='Search' type="text" />
-                <button className="Search-Cancel" onClick={cancelSearch}><img alt="cancel" src="/1F1FD.svg"/></button>
+                <div className="Search-Input-Container">
+                    <input tabIndex="11" ref={searchInput} onChange={(e)=>handleSearch(e)} placeholder='Search' type="text" />
+                    {/* <button className="Search-Cancel" onClick={cancelSearch}><img alt="cancel" src="/1F1FD.svg"/></button> */}
+                </div>
             </div>
             <div className="RolodexCards-Container">
                 {showBirthday ? <Birthdays rolodexData={rolodexData} selectCard={selectCard} /> : rolodexEles}
