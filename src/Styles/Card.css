@@ -80,6 +80,6 @@
   }
 
 .Notes {
-    min-height: 25% !important;
-    max-height: 25% !important;
+    min-height: 25%;
+    max-height: 25%;
 }

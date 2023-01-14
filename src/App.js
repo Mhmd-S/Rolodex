@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
 import './App.css';
-import './Styles/From.css'
-import './Styles/RolodexItem.css'
-import './Styles/Rolodex.css'
-import './Styles/Card.css'
-import './Styles/Birthdays.css'
+// import './Styles/From.css'
+// import './Styles/RolodexItem.css'
+// import './Styles/Rolodex.css'
+// import './Styles/Card.css'
+// import './Styles/Birthdays.css'
 import Form from './Components/Form';
 import Rolodex from './Components/Rolodex';
 import Card from './Components/Card';

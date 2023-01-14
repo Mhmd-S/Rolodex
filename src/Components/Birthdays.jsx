@@ -1,5 +1,5 @@
 import React from 'react';
-
+import "../Styles/Birthdays.css"
 
 const Birthdays = ({rolodexData, selectCard}) => {
     

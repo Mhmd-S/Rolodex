@@ -1,4 +1,5 @@
 import React from 'react';
+import "../Styles/RolodexItem.css"
 
 const RolodexItem = ({itemInfo, selectCard, highLighted}) => {
 
