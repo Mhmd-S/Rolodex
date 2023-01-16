@@ -9,8 +9,9 @@
 
 .Birthdays-Birthday-Header {
     width: 100%;
-    background-color: rgb(92, 92, 92);
+    background-color: #9b9a9f38;
     padding: 0.3rem;
+    color: white;
 }
 
 .Birthdays-Birthday-List {
@@ -23,4 +24,6 @@
     padding: 0.4rem;
     font-size: 1.1rem;
     cursor: pointer;
+    color: white;
+    text-decoration: underline;
 }
